@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="color-scheme" content="light dark" />
+    <meta
+      name="description"
+      content="彩票機：投幣抓取彩球、組合獲獎，街機經典紅利系統 Web 版。純前端 Playgrounds SAM，原創小品。"
+    />
+    <title>彩票機</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main>
+      <header class="hero">
+        <h1>彩票機</h1>
+        <p class="tagline">投幣 · 抓球 · 組合 · 純娛樂</p>
+      </header>
+
+      <section class="meter" aria-label="分數">
+        <div class="meter-item">
+          <span class="label">分數</span>
+          <strong id="score">0</strong>
+        </div>
+        <div class="meter-item">
+          <span class="label">彩券</span>
+          <strong id="tickets">0</strong>
+        </div>
+        <div class="meter-item">
+          <span class="label">幣</span>
+          <strong id="credits">10</strong>
+        </div>
+      </section>
+
+      <p id="status" class="status" role="status">點「開始」投入一枚幣！</p>
+
+      <div class="stage">
+        <canvas
+          id="game"
+          width="480"
+          height="640"
+          role="img"
+          aria-label="彩票機機台"
+        ></canvas>
+      </div>
+
+      <p class="hint">點「開始」啟動抓爪，移動滑鼠拖曳至目標球上放開即抓取。將相同顏色的球組合起來得彩券！</p>
+
+      <div class="controls">
+        <button type="button" id="btn-start">開始 (1 幣)</button>
+        <button type="button" id="btn-reset" class="secondary">重來</button>
+        <button type="button" id="btn-mute" class="secondary" aria-pressed="true">音效開</button>
+      </div>
+    </main>
+
+    <script type="module" src="./app.js"></script>
+  </body>
+</html>
